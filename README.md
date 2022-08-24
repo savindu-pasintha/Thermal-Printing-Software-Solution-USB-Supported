@@ -1,8 +1,3 @@
-### 
-# Sales Play POS www.salesplaypos.com
-## Point of Sale and Inventory Management Software (POS) 
-
-
 # Thermal-Printing-Software - (USB Supported) 
 ##    Customer to have fully Freedom to Customize Printing Template any of items. 
 #### Who Can For this : 
@@ -21,6 +16,10 @@
 ####   4 : Then Click Submit Button
 
 ## Desktop Application Support For Windows Operating System
+
+##### Sales Play POS 
+## Point of Sale and Inventory Management Software (POS) 
+
 
 #### Any modification you want Contact me, 
 #### Software Engineer :  savindu pasintha (Portfolio : https://spasintha.herokuapp.com/) 
