@@ -1,0 +1,18 @@
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\obj\Debug\ThermalPrinterApp.csproj.SuggestedBindingRedirects.cache
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\obj\Debug\ThermalPrinterApp.csproj.CoreCompileInputs.cache
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\bin\Debug\ESC-POS-USB-NET.dll
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\bin\Debug\Newtonsoft.Json.dll
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\bin\Debug\System.Drawing.Common.dll
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\bin\Debug\websocket-sharp-core.dll
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\bin\Debug\Newtonsoft.Json.xml
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\obj\Debug\ThermalPrinterApp.csproj.AssemblyReference.cache
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\obj\Debug\ThermalPrinterApp.csproj.CopyComplete
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\bin\Debug\ESC(POS) Thermal Printer - USB Support.exe.config
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\bin\Debug\ESC(POS) Thermal Printer - USB Support.exe.manifest
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\bin\Debug\ESC(POS) Thermal Printer - USB Support.application
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\bin\Debug\ESC(POS) Thermal Printer - USB Support.exe
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\bin\Debug\ESC(POS) Thermal Printer - USB Support.pdb
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\obj\Debug\ESC(POS) Thermal Printer - USB Support.exe.manifest
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\obj\Debug\ESC(POS) Thermal Printer - USB Support.application
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\obj\Debug\ESC(POS) Thermal Printer - USB Support.exe
+C:\MY DATA FOLDER\Projects\newprinterc\ThermalPrinterApp\obj\Debug\ESC(POS) Thermal Printer - USB Support.pdb
