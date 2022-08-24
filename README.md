@@ -24,7 +24,7 @@
 #### Any modification you want Contact me, 
 #### Software Engineer :  savindu pasintha (Portfolio : https://spasintha.herokuapp.com/) 
 #####                     email : savindupasingtha@gmail.com  
-#####                     +94 768755787  
+#####                     call  :+94 768755787  
 #####                     
 ###                       
 ![printer](https://user-images.githubusercontent.com/64083148/185784438-581662cf-29ef-4c61-933d-8a59f34c7dca.PNG)
