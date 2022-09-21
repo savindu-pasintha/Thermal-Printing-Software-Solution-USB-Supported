@@ -1,0 +1,329 @@
+using System;
+using System.Collections;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using ESC_POS_USB_NET.Printer;
+using ESC_POS_USB_NET.Enums;
+using System.Windows.Controls;
+using System.Windows.Shapes;
+using SkiaSharp;
+using System.IO;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using Microsoft.Win32;
+
+namespace PrinterApp
+{
+    public partial class Form1 : Form
+    {
+        // The path to the key where Windows looks for startup applications
+        RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+
+        public string txtPrinterName1 = "POS80(2)";
+        public string txtPrinterName2 = "Epson";
+        public Form1()
+        {
+            InitializeComponent();
+            if (rkApp.GetValue("MyApp") == null)
+            {
+                rkApp.SetValue("MyApp", Application.ExecutablePath.ToString());
+            }
+        }
+        // using image object not file 
+        public byte[] imageToByteArray(System.Drawing.Image imageIn)
+        {
+            System.IO.MemoryStream ms = new MemoryStream();
+            imageIn.Save(ms, System.Drawing.Imaging.ImageFormat.Gif);
+            return ms.ToArray();
+        }
+       /* private static Bitmap drawr(System.Windows.Controls.Control control)
+        {
+
+            Bitmap bitmap = new Bitmap(10, 10);
+            Graphics graphics = Graphics.FromImage(bitmap);
+            Rectangle rect = control.RectangleScreen(control.ClientRectangle);
+        }
+       */
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
+            Printer printer = new Printer(txtPrinterName1);
+            // printer.Append(imageToByteArray(new Bitmap(Bitmap.FromFile(Application.StartupPath + "\\Icon.bmp"))));
+            // Bitmap original = new Bitmap(Bitmap.FromFile(Application.StartupPath + "\\Icon.bmp"));
+            // Bitmap resized = new Bitmap(original, new Size(500, 500));
+
+           // printer.Image(resized);
+            printer.FullPaperCut();
+            printer.PrintDocument();
+
+        }
+        public System.Drawing.Image byteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            System.Drawing.Image returnImage = System.Drawing.Image.FromStream(ms);
+            return returnImage;
+        }
+        private SKBitmap textInCanvasBitMap(string text)
+       {
+            SKBitmap bitmap = new SKBitmap();
+            SKCanvas canvas = new SKCanvas(bitmap);
+            SKPaint paint = new SKPaint
+            {
+                TextSize = 64.0f,
+                IsAntialias = true,
+                Color = new SKColor(136, 136, 136),
+                TextScaleX = 1.5f
+            };
+            canvas.DrawText(text, 20.0f, 64.0f, paint);
+            return new SKBitmap();
+       }
+        //button click to print
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //
+            Printer printer = new Printer(txtPrinterName1);
+            printer.TestPrinter();
+            printer.FullPaperCut();
+            printer.PrintDocument();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           Console.WriteLine(Application.StartupPath + "\\Icon.bmp");
+              button2.Text= Application.StartupPath + "\\Icon.bmp";
+           //
+            Printer printer = new Printer(txtPrinterName1);
+
+
+
+            Bitmap image = new Bitmap(Bitmap.FromFile(Application.StartupPath+"\\Icon.bmp"));
+            // printer.Image(image);
+            //printer.FullPaperCut();
+            //printer.PrintDocument();
+
+            //Bitmap bmp = new Bitmap(Application.StartupPath + "\\Icon.bmp");
+            //Bitmap bmp = new Bitmap(100,10,System.Drawing.Imaging.PixelFormat.Format32bppPArgb
+            // Bitmap bmp = new Bitmap(100, 10);
+            Bitmap bmp = new Bitmap(100, 100);
+            RectangleF rectf = new RectangleF(0, 0,0,0);
+
+            Pen pen = new Pen(Color.Black,1);
+            Graphics g = Graphics.FromImage(bmp);
+            g.Clear(Color.White);//set background color
+
+            // g.SmoothingMode = SmoothingMode.AntiAlias;
+            // g.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            // g.PixelOffsetMode = PixelOffsetMode.HighQuality;
+            string text = "هي أميهي أميهي أميهي أمي";//arabic
+            text = "Проверьте перевод слова «русс» на сингальский язык.";//russian
+            //g.DrawArc(pen, 0, 0, 100, 100, 0, 180);
+            g.DrawString(text, new Font("Arial", 10, FontStyle.Regular,GraphicsUnit.Pixel), Brushes.Black, rectf);
+           
+           /* for (var i = 0; i < 5; i++)
+            {
+                //printer.Append(text);
+                printer.Image(bmp);
+            }
+            printer.FullPaperCut();
+            printer.PrintDocument();
+           */
+            g.Flush();
+            bmp.Save("savedImage.bmp");
+            g.Dispose();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            //
+          
+            Printer printer = new Printer(txtPrinterName1);
+            printer.Append("Code 128");
+            printer.Code128("123456789");
+            printer.Separator();
+
+            printer.Append("Code39");
+            printer.Code39("123456789",Positions.BelowBarcode);
+            printer.Separator('=');
+
+            printer.Append("Ean13");
+            printer.Ean13("1234567891231", Positions.AbovBarcode);
+            printer.FullPaperCut();
+            printer.PrintDocument();
+           
+           
+        }
+
+        //opwn drawer
+        private void button4_Click(object sender, EventArgs e)
+        {
+            //
+            Printer printer = new Printer(txtPrinterName1);
+            printer.OpenDrawer();
+            printer.PrintDocument();
+        }
+
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //
+            Printer printer = new Printer(txtPrinterName1);
+            printer.Separator(); // Default
+            printer.Separator('.'); // .
+            printer.Separator('|'); // |
+            printer.Separator('='); // =
+            printer.Separator('+'); // +
+            printer.Separator('*'); // *
+            printer.Separator('^'); // ^
+            printer.Separator('~'); // ~
+            printer.Separator(':'); // :
+            printer.Separator('#'); // #
+            printer.FullPaperCut();
+            printer.PrintDocument();
+        }
+
+
+        //test typograpy
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var itemList = new ArrayList();
+            itemList.Add("3 : Apple Juice        2                  250.00");
+            itemList.Add("    500.00");
+            itemList.Add("4 : Apple Juice        3                  250.00");
+            itemList.Add("    500.00");
+            itemList.Add("5 : Apple Juice        1                  250.00");
+            itemList.Add("    500.00");
+            itemList.Add("6 : Apple Juice        8                  250.00");
+            itemList.Add("    500.00");
+            itemList.Add("7 : Apple Juice        1                 2000.00");
+            itemList.Add("    500.00");
+            itemList.Add("8 : Apple Juice        1                  250.00");
+            itemList.Add("    500.00");
+            itemList.Add("9 : Apple Juice        1                  250.00");
+            itemList.Add("    500.00");
+            itemList.Add("10: Apple Juice        1                  250.00");
+            itemList.Add("    500.00");
+            itemList.Add("11: Apple Juice        1                  250.00");
+
+
+
+            Printer printer = new Printer(txtPrinterName1);
+         // Bitmap image = new Bitmap(Bitmap.FromFile(Application.StartupPath + "\\Icon.bmp"));//223x223px
+            Bitmap image = new Bitmap(Bitmap.FromFile(Application.StartupPath + "\\Icon100x100.bmp"));
+
+            printer.AlignCenter();
+            printer.Image(image);
+            printer.NewLines(3);
+            
+            printer.AlignCenter();
+            printer.Append("No. 262/6,");
+            printer.Append("Gall Road,");
+            printer.Append("Colombo 7.");
+            printer.Append("+94 17 77 88 99");
+            printer.Append("");
+            printer.Separator('-');
+
+            printer.AlignLeft();
+            printer.Append("Reciept     #:991234");
+            printer.Append("Cashier      :Robert");
+            printer.Append("Customer     :Savindu Pasintha");
+            printer.Append("Date         :2022-06-16 09:12am");
+            printer.Append("Payment type :Card");
+            printer.NewLine();
+            printer.Separator('-');
+            printer.NewLine();
+
+         // printer.Append("123456789012345678901234567890123456789012345678");
+
+            printer.Append("Item Price            Qty             Total(LKR)");
+            printer.Append("1 : Apple Juice        1                 250.00");
+            printer.Append("    250.00");
+            printer.Append("2 : Apple Juice        2                 250.00");
+            printer.Append("    500.00");
+            foreach(var item in itemList) { printer.Append(item.ToString()); }
+            
+            printer.NewLine();
+            printer.Separator('-');
+            printer.NewLine();
+
+            printer.AlignLeft();
+            printer.Append("Sub total(LKR)                            750.00");
+            printer.Separator('-');
+            printer.Append("Grand total(LKR)                          750.00");
+            printer.Append("Cash(LKR)                                 750.00");
+            printer.Append("Balance(LKR)                              750.00");
+            printer.Separator('-');
+            printer.NewLine();
+
+            printer.AlignCenter();
+            printer.Append("Thank you come again !!!!!");
+
+            printer.FullPaperCut();
+            printer.PrintDocument();
+
+
+            /* printer.Append("1...5...10...15...20...25...30...35...40...45.48");
+             printer.Separator();
+             printer.Append("Text Normal");
+             printer.BoldMode("Bold Text");
+             printer.UnderlineMode("Underlined text");
+             printer.Separator();
+             printer.ExpandedMode(PrinterModeState.On);
+             printer.Append("Expanded - 23 COLUMNS");
+             printer.Append("1...5...10...15...20..23");
+             printer.ExpandedMode(PrinterModeState.Off);
+             printer.Separator();
+             printer.CondensedMode(PrinterModeState.On);
+             printer.Append("Condensed - 64 COLUMNS");
+             printer.Append("1...5...10...15...20...25...30...35...40...45...50...55...60..64");
+             printer.CondensedMode(PrinterModeState.Off);
+             printer.Separator();
+             printer.DoubleWidth2();
+             printer.Append("Font Width 2");
+             printer.DoubleWidth3();
+             printer.Append("Font Width 3");
+             printer.NormalWidth();
+             printer.Append("Normal width");
+             printer.Separator();
+             printer.AlignRight();
+             printer.Append("Right aligned text");
+             printer.AlignCenter();
+             printer.Append("Center-aligned text");
+             printer.AlignLeft();
+             printer.Append("Left aligned text");
+             printer.Separator();
+             printer.Font("Font A", Fonts.FontA);
+             printer.Font("Font B", Fonts.FontB);
+             printer.Font("Font C", Fonts.FontC);
+             printer.Font("Font D", Fonts.FontD);
+             printer.Font("Font E", Fonts.FontE);
+             printer.Font("Font Special A", Fonts.SpecialFontA);
+             printer.Font("Font Special B", Fonts.SpecialFontB);
+             printer.Separator();
+             printer.InitializePrint();
+             printer.SetLineHeight(24);
+             printer.Append("This is first line with line height of 30 dots");
+             printer.SetLineHeight(40);
+             printer.Append("This is second line with line height of 24 dots");
+             printer.Append("This is third line with line height of 40 dots");
+             printer.NewLines(3);
+             printer.Append("End of Test :)");
+             printer.Separator();
+            // printer.FullPaperCut();
+            */
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
