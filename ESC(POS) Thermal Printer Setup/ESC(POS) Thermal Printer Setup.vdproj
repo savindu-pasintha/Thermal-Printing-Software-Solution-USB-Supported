@@ -838,12 +838,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B3AB72E6BA22602F7ED7E17DEC601ACA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_FE32FBAE4B7B4774AD5057AC9C381C78"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -1537,6 +1531,12 @@
         "OwnerKey" = "8:_723AC71BD5445262883E54FA2B75BB58"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B3AB72E6BA22602F7ED7E17DEC601ACA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -1562,6 +1562,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -1569,7 +1577,7 @@
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\ESC(POS) Thermal Printer Setup.msi"
+        "OutputFilename" = "8:Release\\ESC(POS) Thermal Printer.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -5574,7 +5582,7 @@
         {
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_0E096627E2CB46F29E917A84AC746481"
             {
-            "Name" = "8:ESC(POS) Thermal Printer - USB Support"
+            "Name" = "8:ESC(POS) Thermal Printer"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -5588,7 +5596,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_EFE268B15AE04ED4BCFC948636D8ACDB"
             {
-            "Name" = "8:ESC(POS) Thermal Printer Setup - USB Support"
+            "Name" = "8:ESC(POS) Thermal Printer"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"

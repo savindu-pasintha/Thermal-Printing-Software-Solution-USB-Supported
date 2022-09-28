@@ -67,13 +67,21 @@ public class POSMSGES : WebSocketBehavior
     private void printerExcuteAnyData(RecieptJsonClass recieptJsonClass)
     {
 
-        Printer printer = new Printer(recieptJsonClass.printerName.ToString());
-        if (!recieptJsonClass.topLogoBase64String.ToString().IsNullOrEmpty())
+            // sample code pages
+            //https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-7.0
+            Printer printer = new Printer(recieptJsonClass.printerName.ToString());
+           // Printer printer = new Printer(recieptJsonClass.printerName.ToString(), "CP720");
+           // printer.Append("الأم جميلة جدا.");
+            if (!recieptJsonClass.topLogoBase64String.ToString().IsNullOrEmpty())
         {
+           // printer.Append("-------------------------");
             Bitmap image = new Bitmap(base64ImageToBitmap(recieptJsonClass.topLogoBase64String.ToString()));
+           // Bitmap reSizedImage = new Bitmap(image, 100, 50);
             printer.AlignCenter();
-            printer.Image(image);
-            printer.NewLines(3);
+                // printer.Image(reSizedImage);
+                printer.Image(image);
+            //    printer.Append("-------------------------");
+                printer.NewLines(3);
         }
 
         int i = 1;
