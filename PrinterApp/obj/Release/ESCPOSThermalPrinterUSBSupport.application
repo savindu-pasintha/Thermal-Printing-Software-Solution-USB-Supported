@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ESCPOSThermalPrinterUSBSupport.exe.manifest" size="12460">
+    <dependentAssembly dependencyType="install" codebase="ESCPOSThermalPrinterUSBSupport.exe.manifest" size="24402">
       <assemblyIdentity name="ESCPOSThermalPrinterUSBSupport.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>I5nuHRaRpQpOL2PpuJRi8lSPocPTK6Qm6ec9HyWELh0=</dsig:DigestValue>
+        <dsig:DigestValue>zSS/BOwNp5Ux1XgIVXUAWPkqClw3iE4VzPVbI3R2daU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
