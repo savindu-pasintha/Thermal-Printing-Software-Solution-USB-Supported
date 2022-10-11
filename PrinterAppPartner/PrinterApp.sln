@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrinterAppPartner", "PrinterAppPartner.csproj", "{44FAE56F-D66F-41FF-93D0-3AC2D7E7CD9D}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ESC(POS) Thermal Printer Setup", "..\ESC(POS) Thermal Printer Setup Partner\ESC(POS) Thermal Printer Setup Partner.vdproj", "{1036BD14-AA1D-4FFA-BC0C-B5F3FA5B9A04}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44FAE56F-D66F-41FF-93D0-3AC2D7E7CD9D}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{44FAE56F-D66F-41FF-93D0-3AC2D7E7CD9D}.Debug|Any CPU.Build.0 = Release|Any CPU
+		{44FAE56F-D66F-41FF-93D0-3AC2D7E7CD9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44FAE56F-D66F-41FF-93D0-3AC2D7E7CD9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1036BD14-AA1D-4FFA-BC0C-B5F3FA5B9A04}.Debug|Any CPU.ActiveCfg = Release
+		{1036BD14-AA1D-4FFA-BC0C-B5F3FA5B9A04}.Debug|Any CPU.Build.0 = Release
+		{1036BD14-AA1D-4FFA-BC0C-B5F3FA5B9A04}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A62BD7B6-9D63-4712-98EB-F0BB27F56509}
+	EndGlobalSection
+EndGlobal
