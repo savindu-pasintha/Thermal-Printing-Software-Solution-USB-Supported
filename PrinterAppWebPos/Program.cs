@@ -93,6 +93,12 @@ public class AccessListOfPrinters : WebSocketBehavior
             //Style.FontB < Style.None
 
             var e = new EPSON();
+
+            if (!recieptJsonClass.openDrawer.ToString().IsNullOrEmpty() && recieptJsonClass.openDrawer)
+            {
+                byteArrayBuilder.Append(e.CashDrawerOpenPin2(120, 240));
+            }
+
             if (!recieptJsonClass.topLogoBase64String.ToString().IsNullOrEmpty())
                  {
                 //string imagePath = @"C:\MY DATA FOLDER\Projects\newprinterc\PrinterApp\Icon.bmp";
@@ -327,7 +333,7 @@ public class AccessListOfPrinters : WebSocketBehavior
                 byteArrayBuilder.Append(e.FullCut());
             }
             
-            byteArrayBuilder.Append(e.CashDrawerOpenPin2(120,240));
+          
             try
             {
                 printerEpson.WriteAsync(byteArrayBuilder.ToArray());
@@ -346,9 +352,15 @@ public class AccessListOfPrinters : WebSocketBehavior
             // sample code pages
             //https://learn.microsoft.com/en-us/dotnet/api/system.text.encoding?view=net-7.0
             Printer printer = new Printer(recieptJsonClass.printerName.ToString());
-           // Printer printer = new Printer(recieptJsonClass.printerName.ToString(), "CP720");
-           // printer.Append("الأم جميلة جدا.");
-        if (!recieptJsonClass.topLogoBase64String.ToString().IsNullOrEmpty())
+            // Printer printer = new Printer(recieptJsonClass.printerName.ToString(), "CP720");
+            // printer.Append("الأم جميلة جدا.");
+
+            if (!recieptJsonClass.openDrawer.ToString().IsNullOrEmpty() && recieptJsonClass.openDrawer)
+            {
+                printer.OpenDrawer();
+            }
+
+            if (!recieptJsonClass.topLogoBase64String.ToString().IsNullOrEmpty())
         {
            // printer.Append("-------------------------");
             Bitmap image = new Bitmap(base64ImageToBitmap(recieptJsonClass.topLogoBase64String.ToString()));
@@ -530,7 +542,6 @@ public class AccessListOfPrinters : WebSocketBehavior
         }
             try
             {
-                printer.OpenDrawer();
                 printer.PrintDocument();
             }
             catch(Exception ex)

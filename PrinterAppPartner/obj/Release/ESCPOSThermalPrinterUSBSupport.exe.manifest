@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ESCPOSThermalPrinterUSBSupport.exe" size="233504">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ESCPOSThermalPrinterUSBSupport.exe" size="234016">
       <assemblyIdentity name="ESCPOSThermalPrinterUSBSupport" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SIR4PG4f5UIm8kGBFDY/aMXXIW8TO8NE/EGuMNQq9Mo=</dsig:DigestValue>
+        <dsig:DigestValue>BrwrismGIQtDM7kQv9BBBHPr1a6wvvo51Z+7jo20B24=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
