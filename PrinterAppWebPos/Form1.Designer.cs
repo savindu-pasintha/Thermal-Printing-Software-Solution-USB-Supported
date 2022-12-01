@@ -1,4 +1,5 @@
-﻿namespace PrinterApp
+﻿
+namespace PrinterApp
 {
     partial class Form1
     {

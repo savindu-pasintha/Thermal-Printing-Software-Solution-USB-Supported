@@ -127,7 +127,6 @@ C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Su
 C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\bin\Release\System.Text.Json.xml
 C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\bin\Release\System.Threading.Tasks.Extensions.xml
 C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\bin\Release\System.ValueTuple.xml
-C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\obj\Release\PrinterAppPartner.csproj.AssemblyReference.cache
 C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\obj\Release\PrinterAppPartner.csproj.SuggestedBindingRedirects.cache
 C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\obj\Release\PrinterApp.Form1.resources
 C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\obj\Release\ESCPOSThermalPrinterUSBSupport.Properties.Resources.resources
@@ -138,3 +137,5 @@ C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Su
 C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\obj\Release\PrinterAppPartner.csproj.CopyComplete
 C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\obj\Release\ESCPOSThermalPrinterUSBSupport.exe
 C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\obj\Release\ESCPOSThermalPrinterUSBSupport.pdb
+C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\bin\Release\InTheHand.Net.Personal.dll
+C:\MY DATA FOLDER\Projects\newprinterc\Thermal-Printing-Software-Solution-USB-Supported\PrinterAppPartner\bin\Release\InTheHand.Net.Personal.xml
