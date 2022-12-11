@@ -1,4 +1,4 @@
-<title> Thermal Printer SDK For Windows Operating System - (USB/Ethernet/Wifi/Bluetooth Supported) connect your web pos</title>
+
 # Thermal Printer SDK For Windows Operating System - (USB/Ethernet/Wifi/Bluetooth Supported) 
 ##### Easiest way to connect your web pos (point of sale) app with thermal printer.
 ## Any kind of thermal printer support for the recipt/bill pring
