@@ -1,4 +1,8 @@
-# Thermal-Printing-Software - (USB Supported) 
+<title> Thermal Printer SDK For Windows Operating System - (USB/Ethernet/Wifi/Bluetooth Supported) connect your web pos</title>
+# Thermal Printer SDK For Windows Operating System - (USB/Ethernet/Wifi/Bluetooth Supported) 
+##### Easiest way to connect your web pos (point of sale) app with thermal printer.
+## Any kind of thermal printer support for the recipt/bill pring
+
 ##    Customer to have fully Freedom to Customize Printing Template any of items. 
 #### Who Can For this : 
 #####          Any kind of Thermal Reciept printing solution you want , you can use this. (ex : sales , shop , market , wholesale ..)
@@ -17,14 +21,10 @@
 
 ## Desktop Application Support For Windows Operating System
 
-##### Sales Play POS 
-## Point of Sale and Inventory Management Software (POS) 
-
-
 #### Any modification you want Contact me, 
-#### Software Engineer :  savindu pasintha (Portfolio : https://spasintha.herokuapp.com/) 
+#### Software Engineer :  savindu pasintha
 #####                     email : savindupasingtha@gmail.com  
-#####                     call  :+94 768755787  
+#####                     call/whatsapp  :+94 768755787  
 #####                     
 ###                       
 ![printer](https://user-images.githubusercontent.com/64083148/185784438-581662cf-29ef-4c61-933d-8a59f34c7dca.PNG)
